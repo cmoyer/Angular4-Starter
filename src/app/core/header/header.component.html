@@ -1,0 +1,16 @@
+<nav class="navbar navbar-main navbar-fixed-top" role="navigation">
+  <div class="container-fluid outer">
+    <ul class="nav navbar-nav pull-sm-left">
+      <li class="nav-item">
+        <button *ngIf="authService.isAuthenticated()" type="button" class="navbar-btn menu-btn" (click)="toggleMenu()">
+          <img src="../../../assets/images/hamburgerIcon.png">
+        </button>
+      </li>
+    </ul>
+    <div class="app-name-div">
+      <a routerLink="/" class="nav-link app-name-link app-name">Time <span class="title-dark">Tracking</span></a>
+    </div>
+  </div>
+</nav>
+
+<app-menu [@slideInOut]="menuStatus"></app-menu>

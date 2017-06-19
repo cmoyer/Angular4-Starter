@@ -1,0 +1,84 @@
+:host {
+  position: fixed;
+  top: 0;
+  width:250px;
+  height:100vh;
+  padding:10px;
+  background: rgba(239, 240, 242,1);
+  margin-left:-250px;
+  /*margin-left: 0;*/
+  z-index: 1500;
+  border-width: 3px 10px 3px 0;
+  border-style: solid;
+  -webkit-border-image:
+      -webkit-gradient(linear, 0 0, 100% 0, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image:
+      -webkit-linear-gradient(left, rgba(239, 240, 242, 1), rgba(239, 240, 242, 0)) 1 100%;
+  -moz-border-image:
+      -moz-linear-gradient(left, rgba(239, 240, 242, 1), rgba(239, 240, 242, 0)) 1 100%;
+  -o-border-image:
+      -o-linear-gradient(left, rgba(239, 240, 242, 1), rgba(239, 240, 242, 0)) 1 100%;
+  border-image:
+      linear-gradient(to left, rgba(239, 240, 242, 1), rgba(239, 240, 242, 0)) 1 100%;
+}
+
+:host ul {
+  margin-top: 3rem;
+  padding: 0 0 0 0.5rem;
+}
+
+.dropdown-menu {
+  margin-top: 0 !important;
+}
+
+.dropdown-menu li {
+  border-top: none;
+}
+
+.thickerNavBorder {
+  border-top: 5px solid !important;
+  border-top-color: rgba(167, 185, 193, 1) !important;
+  list-style: none !important;
+  padding: 0.25rem !important;
+}
+
+:host li {
+  border-top: 1px solid;
+  border-top-color: rgba(167, 185, 193, 1);
+  list-style: none;
+  padding: 0.25rem;
+}
+
+.noTopBorder {
+  border-top: transparent !important;
+}
+
+
+:host li a {
+  display: block;
+  font-family: TPJWebFont-Light;
+  font-size: 1.5em;
+  color: rgba(111,111,111, 1);
+  width: 100%;
+  /*height: 4rem;    original value*/
+  /*padding-top: 1rem;  original value*/
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.menu-close-btn {
+  float: right;
+  background: transparent;
+  border: none;
+}
+
+.menu-close-btn:focus{
+  outline: none;
+}
+
+.menu-icon {
+  /*height: 1.25em;*/
+  width: 1.25em;
+  vertical-align: sub;
+  margin-right: 0.3em;
+}

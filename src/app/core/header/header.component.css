@@ -1,0 +1,53 @@
+.navbar-main {
+  background-color: rgba(12,152,111,1);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+}
+
+.menu-btn:focus {
+  outline: none;
+}
+
+.title-dark {
+  color: rgba(18,85,67,1);
+}
+
+.app-name {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  /*width: 130px;*/
+  white-space: nowrap;
+  letter-spacing: -0.025em;
+}
+
+.app-name-link {
+  color: white !important;
+  text-decoration: none;
+  padding-right: 50px;
+}
+
+.navbar-nav .nav-link {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.app-name-div {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  align-self: center;
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+}
+

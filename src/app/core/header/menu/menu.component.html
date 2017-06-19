@@ -1,0 +1,18 @@
+<button type="button" class="menu-close-btn" id="menu-close" (click)="closeMenu()">
+  <img src="../../../../assets/images/MenuCloseIcon.png">
+</button>
+<div class="menu-slideout" id="main-menu">
+
+  <ul class="">
+    <li routerLinkActive="active"><a routerLink="/timesheets" (click)="closeMenu()"><img class="menu-icon" src="../../../../assets/images/MenuCalendarIcon.png"> My Timesheets</a></li>
+    <li routerLinkActive="active"><a routerLink="/approvals" (click)="closeMenu()"><img class="menu-icon" src="../../../../assets/images/MenuCheckIcon.png"> My Approvals</a></li>
+    <li class="dropdown" appDropdown *ngIf="user">
+      <a style="cursor: pointer;" class="dropdown-toggle" role="button">
+        <img class="menu-icon" src="../../../../assets/images/MenuPersonIcon.png"> {{user.EmpFirstName}} {{user.EmpLastName}} <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;" href="https://apps1.pjdick.com/names.nsf?Logout&redirectto=https://www.pjdick.com">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
