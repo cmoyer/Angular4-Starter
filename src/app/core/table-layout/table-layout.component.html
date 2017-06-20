@@ -6,22 +6,8 @@
       <th *ngFor="let map of columnMaps" [appColumnWidth]="map.width" [appHideColumn]="map.hideOnMobile">{{ map.header }}</th>
     </tr>
   </thead>
-  <tbody *ngIf="type === 'timesheets'">
-    <tr *ngFor="let record of records | StatusFilter:statusFilter | DateRangeFilter:dateRangeFilter" [routerLink]="'/timesheets/' + [record.DocUNID]" style="cursor: pointer;">
-      <td><img class="timesheetIcon" src="../../../assets/images/OpenTimesheetIcon.png"></td>
+  <tbody>
+    <tr *ngFor="let record of records">
       <td *ngFor="let map of columnMaps" [appStyleCell]="record[map.access(record)]" [appColumnWidth]="map.width" [appHideColumn]="map.hideOnMobile">{{ record[map.access(record)] | formatCell:map.format }}</td>
     </tr>
-  </tbody>
-  <tbody *ngIf="type === 'tasks'">
-  <tr *ngFor="let record of records | StatusFilter:statusFilter | DateRangeFilter:dateRangeFilter" [routerLink]="'/task/' + [record.UNID]" style="cursor: pointer;">
-    <td><img class="timesheetIcon" src="../../../assets/images/OpenTimesheetIcon.png"></td>
-    <td *ngFor="let map of columnMaps" [appStyleCell]="record[map.access(record)]" [appColumnWidth]="map.width" [appHideColumn]="map.hideOnMobile">{{ record[map.access(record)] | formatCell:map.format }}</td>
-  </tr>
-  </tbody>
-  <tbody *ngIf="type === 'approvalEdit'">
-    <tr *ngFor="let record of records | StatusFilter:statusFilter | DateRangeFilter:dateRangeFilter" style="cursor: pointer;">
-      <td><input type="checkbox" name="selectedTasks" value="{{record.UNID}}" [(ngModel)]="record.selected"></td> <!-- This will be the checkbox -->
-      <td *ngFor="let map of columnMaps" [appStyleCell]="record[map.access(record)]" [appColumnWidth]="map.width" [appHideColumn]="map.hideOnMobile">{{ record[map.access(record)] | formatCell:map.format }}</td>
-    </tr>
-  </tbody>
 </table>

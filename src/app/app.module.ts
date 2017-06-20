@@ -14,12 +14,15 @@ import { HideColumnDirective } from './core/table-layout/hide-column.directive';
 import { ModalComponent } from './core/modal/modal.component';
 import { MenuService } from './core/menu.service';
 import { CurrencyPipe } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropdownDirective } from './core/dropdown.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MenuComponent,
+    DropdownDirective,
     TableLayoutComponent,
     FormatCellPipe,
     StyleCellDirective,
@@ -30,7 +33,8 @@ import { CurrencyPipe } from '@angular/common';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
   ],
   providers: [MenuService, CurrencyPipe],
   bootstrap: [AppComponent]

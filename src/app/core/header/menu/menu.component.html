@@ -4,14 +4,14 @@
 <div class="menu-slideout" id="main-menu">
 
   <ul class="">
-    <li routerLinkActive="active"><a routerLink="/timesheets" (click)="closeMenu()"><img class="menu-icon" src="../../../../assets/images/MenuCalendarIcon.png"> My Timesheets</a></li>
-    <li routerLinkActive="active"><a routerLink="/approvals" (click)="closeMenu()"><img class="menu-icon" src="../../../../assets/images/MenuCheckIcon.png"> My Approvals</a></li>
-    <li class="dropdown" appDropdown *ngIf="user">
+    <li routerLinkActive="active"><a (click)="closeMenu()"><img class="menu-icon" src="../../../../assets/images/MenuCalendarIcon.png"> View 1</a></li>
+    <li routerLinkActive="active"><a (click)="closeMenu()"><img class="menu-icon" src="../../../../assets/images/MenuCheckIcon.png"> View 2</a></li>
+    <li class="dropdown" appDropdown>
       <a style="cursor: pointer;" class="dropdown-toggle" role="button">
-        <img class="menu-icon" src="../../../../assets/images/MenuPersonIcon.png"> {{user.EmpFirstName}} {{user.EmpLastName}} <span class="caret"></span>
+        <img class="menu-icon" src="../../../../assets/images/MenuPersonIcon.png"> John Doe <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
-        <li><a style="cursor: pointer;" href="https://apps1.pjdick.com/names.nsf?Logout&redirectto=https://www.pjdick.com">Logout</a></li>
+        <li><a style="cursor: pointer;">Logout</a></li>
       </ul>
     </li>
   </ul>

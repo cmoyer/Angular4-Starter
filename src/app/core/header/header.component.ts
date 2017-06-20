@@ -1,8 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import { MenuService } from '../../shared/menu.service';
+import { MenuService } from '..//menu.service';
 import { Subscription } from 'rxjs/Subscription';
-import { AuthService } from '../../auth/auth.service';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
@@ -25,7 +24,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   menuStatus: string;
 
-  constructor(private menuService: MenuService, private authService: AuthService) { }
+  constructor(private menuService: MenuService) { }
 
   ngOnInit() {
     this.menuStatus = this.menuService.getMenuStatus();
