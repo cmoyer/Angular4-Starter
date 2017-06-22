@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 text-center title-div">
+    <h2>My Timesheets</h2>
+  </div>
+  <div class="col-md-3 text-center">
+    <button type="button"><img class="createImg" (click)="createTimesheetModal.show()" src="../../assets/images/CreateTimesheet.png"></button>
+  </div>
+</div>
+<div class="container">
+  <app-table-layout [records]="timesheets"
+                    [caption]="' '"
+                    [settings]="timesheetSettings">
+  </app-table-layout>
+</div>
+<app-modal #createTimesheetModal>
+  <div class="app-modal-header">
+    <div class="col-sm-8 col-sm-offset-2 text-center title-div">
+      <h2>Create New Timesheet</h2>
+    </div>
+  </div>
+  <div class="app-modal-body">
+    <p>This is an example of the reusable modal that I created to be used throughout any Angular 4 applications.</p>
+    <p>
+      You can use this modal for simple plain text applications such as this, or you can create reactive forms within the
+      'app-modal-body' and use that as part of the feature workflow.
+    </p>
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn greenBtn" (click)="createTimesheetModal.hide()">OK</button>
+  </div>
+</app-modal>

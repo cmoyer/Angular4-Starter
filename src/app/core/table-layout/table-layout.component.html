@@ -2,7 +2,6 @@
   <caption *ngIf="caption">{{ caption }}</caption>
   <thead>
     <tr>
-      <th></th>
       <th *ngFor="let map of columnMaps" [appColumnWidth]="map.width" [appHideColumn]="map.hideOnMobile">{{ map.header }}</th>
     </tr>
   </thead>

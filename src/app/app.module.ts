@@ -16,6 +16,8 @@ import { MenuService } from './core/menu.service';
 import { CurrencyPipe } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownDirective } from './core/dropdown.directive';
+import { MyTimesheetsComponent } from './my-timesheets/my-timesheets.component';
+import { FakeService } from './my-timesheets/fakedata.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { DropdownDirective } from './core/dropdown.directive';
     StyleCellDirective,
     ColumnWidthDirective,
     HideColumnDirective,
-    ModalComponent
+    ModalComponent,
+    MyTimesheetsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { DropdownDirective } from './core/dropdown.directive';
     HttpModule,
     BrowserAnimationsModule,
   ],
-  providers: [MenuService, CurrencyPipe],
+  providers: [MenuService, CurrencyPipe, FakeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
